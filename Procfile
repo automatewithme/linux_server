@@ -1,0 +1,1 @@
+web: flask db upgrade; gunicorn hp1:app
