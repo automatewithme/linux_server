@@ -1,4 +1,4 @@
-2019-12-23 02:15:31,101ERROR: Exception on / [GET] [in c:\users\hp\desktop\hp1\venv\lib\site-packages\flask\app.py:1890]
+2019-12-23 02:15:33,133ERROR: Exception on / [GET] [in c:\users\hp\desktop\hp1\venv\lib\site-packages\flask\app.py:1890]
 Traceback (most recent call last):
   File "c:\users\hp\desktop\hp1\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
     response = self.full_dispatch_request()
@@ -83,3 +83,54 @@ Traceback (most recent call last):
   File "c:\users\hp\desktop\hp1\venv\lib\site-packages\jinja2\parser.py", line 59, in fail
     raise exc(msg, lineno, self.name, self.filename)
 jinja2.exceptions.TemplateSyntaxError: unexpected '%'
+2019-12-23 02:17:49,085INFO: Microblog startup [in C:\Users\HP\Desktop\hp1\app\__init__.py:51]
+2019-12-23 02:18:02,696ERROR: Exception on /login [GET] [in c:\users\hp\desktop\hp1\venv\lib\site-packages\flask\app.py:1890]
+Traceback (most recent call last):
+  File "c:\users\hp\desktop\hp1\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\hp\desktop\hp1\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\hp\desktop\hp1\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\hp\desktop\hp1\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\hp\desktop\hp1\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\hp\desktop\hp1\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\HP\Desktop\hp1\app\routes.py", line 53, in login
+    return render_template('login.html', title='Sign In', form=form)
+  File "c:\users\hp\desktop\hp1\venv\lib\site-packages\flask\templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "c:\users\hp\desktop\hp1\venv\lib\site-packages\jinja2\environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "c:\users\hp\desktop\hp1\venv\lib\site-packages\jinja2\environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "c:\users\hp\desktop\hp1\venv\lib\site-packages\jinja2\environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "c:\users\hp\desktop\hp1\venv\lib\site-packages\jinja2\loaders.py", line 125, in load
+    code = environment.compile(source, name, filename)
+  File "c:\users\hp\desktop\hp1\venv\lib\site-packages\jinja2\environment.py", line 591, in compile
+    self.handle_exception(exc_info, source_hint=source_hint)
+  File "c:\users\hp\desktop\hp1\venv\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\hp\desktop\hp1\venv\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\HP\Desktop\hp1\app\templates\login.html", line 2, in <module>
+    {% extends 'bootstrap/wtf.html' as wtf %}
+  File "c:\users\hp\desktop\hp1\venv\lib\site-packages\jinja2\environment.py", line 497, in _parse
+    return Parser(self, source, name, encode_filename(filename)).parse()
+  File "c:\users\hp\desktop\hp1\venv\lib\site-packages\jinja2\parser.py", line 901, in parse
+    result = nodes.Template(self.subparse(), lineno=1)
+  File "c:\users\hp\desktop\hp1\venv\lib\site-packages\jinja2\parser.py", line 888, in subparse
+    self.stream.expect('block_end')
+  File "c:\users\hp\desktop\hp1\venv\lib\site-packages\jinja2\lexer.py", line 381, in expect
+    raise TemplateSyntaxError("expected token %r, got %r" %
+jinja2.exceptions.TemplateSyntaxError: expected token 'end of statement block', got 'as'
+2019-12-23 02:18:48,301INFO: Microblog startup [in C:\Users\HP\Desktop\hp1\app\__init__.py:51]
+2019-12-23 02:21:11,896INFO: Microblog startup [in C:\Users\HP\Desktop\hp1\app\__init__.py:51]
+2019-12-23 02:48:34,939INFO: Microblog startup [in C:\Users\HP\Desktop\hp1\app\__init__.py:52]
+2019-12-24 02:13:23,139INFO: Microblog startup [in C:\Users\HP\Desktop\hp1\app\__init__.py:52]
+2019-12-24 02:37:00,809 INFO: Microblog startup [in C:\Users\HP\Desktop\hp1\app\__init__.py:55]
+2019-12-25 00:35:45,766 INFO: Microblog startup [in C:\Users\HP\Desktop\hp1\app\__init__.py:73]
+2019-12-25 00:37:24,764 INFO: Microblog startup [in C:\Users\HP\Desktop\hp1\app\__init__.py:72]

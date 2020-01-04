@@ -19,8 +19,8 @@ def before_request():
 	g.search_form = SearchForm()
 
 
-@bp.route('/', methods=['GET', 'POST'])
-@bp.route('/index', methods=['GET', 'POST'])
+
+@bp.route('/index')
 #@login_required
 def index():
     # user = {'username': 'Miguel'}
@@ -35,6 +35,34 @@ def index():
         if posts.has_prev else None
     return render_template("index.html", title='Home Page', posts=posts.items,
                           next_url=next_url, prev_url=prev_url)
+
+@bp.route('/')
+@bp.route('/home')
+def home():
+#	form = SearchForm()
+#	if form.validate_on_submit():
+#		redirect(url_for('search'))
+	return render_template('homepage7.html', title='Home')
+
+@bp.route('/who_we_are')
+def who_we_are():
+	return render_template('who_we_are.html', title='Who We Are')
+
+@bp.route('/services')
+def services():
+	return render_template('services.html', title='Services')
+
+@bp.route('/blog')
+def blog():
+	return render_template('blog.html', title='Blog')
+
+@bp.route('/contact')
+def contact():
+	return render_template('contact.html', title='Contact Us')
+
+#@bp.route('/home')
+#def home():
+#	return render_template('homepage.html', title='TalentDisha')
 
 
 @bp.route('/jobseeker', methods=['GET', 'POST']) # if jobseeker go to /jobseeker
